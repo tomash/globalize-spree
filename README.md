@@ -27,6 +27,20 @@ Usage
 
 Works OOTB.
 
+Currently globalizes: Product (name, description), Taxon (name).
+
+Editing translated attributes for given locale can now be done only via rails console:
+
+    p = Product.first
+    I18n.locale = :de
+    p.name = "Rails Buch"
+    I18n.locale = :fr
+    p.name = "Livre"
+    p.save
+    
+
+(see ToDo)
+
 ToDo
 ====
 
