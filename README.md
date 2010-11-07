@@ -1,11 +1,10 @@
-GlobalizeSpree
-==============
+# GlobalizeSpree
 
 Localizing model data in Spree using Globalize3.
 
 
-Installation
-============
+## Installation
+
 
 Add to Gemfile:
 
@@ -22,8 +21,8 @@ Now run the rake task to copy migrations:
     rake globalize_spree:install
 
 
-Usage
-=====
+## Usage
+
 
 Works OOTB.
 
@@ -41,13 +40,14 @@ Editing translated attributes for given locale can now be done only via rails co
 
 (see ToDo)
 
-ToDo
-====
+## ToDo
+
 
 Lots of stuff, starting from easy-globalize2-accessors functionality for easy customization and automagic extension (via hooks) of spree admin forms (add 'name_en', 'name_de' fields in place of 'name' etc.).
 
 Feel free to open GitHub issue for discussing new features. Pull requests are welcome!
 
 
+## Usual blabber
 
 Copyright (c) 2010 Tomasz "Tomash" Stachewicz, released under the New BSD License
