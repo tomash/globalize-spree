@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'globalize_spree'
-  s.version     = '0.1.0'
+  s.version     = '0.2.0'
   s.summary     = 'Globalize3-Spree integration'
-  s.description = 'the name says it all'
+  s.description = 'A Spree extension that integrates Globalize3 gem for model translations.'
   s.required_ruby_version = '>= 1.8.7'
 
   s.author            = 'Tomasz "Tomash" Stachewicz'
