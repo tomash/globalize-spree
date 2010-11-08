@@ -23,29 +23,39 @@ Now run the rake task to copy migrations:
 
 ## Usage
 
-
 Works OOTB.
 
 Currently globalizes: Product (name, description), Taxon (name).
 
-Editing translated attributes for given locale can now be done only via rails console:
+### Basic usage (vanilla Globalize way)
 
-    p = Product.first
-    I18n.locale = :de
-    p.name = "Rails Buch"
-    I18n.locale = :fr
-    p.name = "Livre"
-    p.save
-    
+Basically works like Globalize, so
+   
+    # set the locale or do not to leave default one
+    I18n.locale = :en
+    # and you are ready to go
+    Product.last.name # <= get name for this product for :en locale
+    Product.last.name = "something" # <= set name for this product for :en locale
 
-(see ToDo)
+### Easy Globalize Accessors
+
+For easy editing of translated stuff for predefined locales, it uses code from easy-globalize2-accessors. Inside self.activate of your lib/spree_site.rb put
+
+    Product.class_eval do
+      globalize_accessors :pl, :en, :de
+    end
+
+And spree-globalize will replace Product form's "name" field with, respectively, "name_pl", "name_en" and "name_de" fields ("description" following same pattern) in admin panel. Try it!
+
 
 ## ToDo
 
+More models.
 
-Lots of stuff, starting from easy-globalize2-accessors functionality for easy customization and automagic extension (via hooks) of spree admin forms (add 'name_en', 'name_de' fields in place of 'name' etc.).
 
-Feel free to open GitHub issue for discussing new features. Pull requests are welcome!
+## Contributing
+
+Feel free to use Github issues and/or contact me via Github PM. Pull requests are welcome, provided they include some explanation (and relevant open issue maybe?).
 
 
 ## Usual blabber

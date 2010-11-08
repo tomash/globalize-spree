@@ -1,0 +1,45 @@
+<% if(Product.easy_accessors.blank?) %>
+  <%= f.field_container :name do %>
+    <%= f.label :name, t("name") %> <span class="required">*</span><br />
+    <%= f.text_field :name, :class => 'fullwidth title'  %>
+    <%= f.error_message_on :name %>
+  <% end %>
+
+<% else %>
+  <%- Product.easy_accessors.each do |locale| %>
+    <% fieldsym = "name_#{locale}".to_sym %>
+    <%= f.field_container fieldsym do %>
+      <%= f.label fieldsym, t(fieldsym.to_s) %><br />
+      <%= f.text_field fieldsym, :class => 'fullwidth title'  %>
+      <%= f.error_message_on fieldsym %>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+<%= f.field_container :permalink do %>
+  <%= f.label :permalink, t("permalink") %> <span class="required">*</span><br />
+  <%= f.text_field :permalink, :class => 'fullwidth title'  %>
+  <%= f.error_message_on :permalink %>
+<% end %>
+
+<% if(Product.easy_accessors.blank?) %>
+
+  <%= f.field_container :description do %>
+    <%= f.label :description, t("description")%><br />
+    <%= f.text_area :description, {:cols => 60, :rows => 4, :class => 'fullwidth'} %>
+    <%= f.error_message_on :description %>
+  <% end %>
+
+<% else %>
+  
+  <%- Product.easy_accessors.each do |locale| %>
+    <% fieldsym = "description_#{locale}".to_sym %>
+    <%= f.field_container fieldsym do %>
+      <%= f.label fieldsym, t(fieldsym.to_s)%><br />
+      <%= f.text_area fieldsym, {:cols => 60, :rows => 4, :class => 'fullwidth'} %>
+      <%= f.error_message_on fieldsym %>
+    <% end %>
+  <% end %>
+
+<% end %>
