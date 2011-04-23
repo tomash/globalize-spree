@@ -8,7 +8,7 @@ Localizing model data in Spree using Globalize3.
 
 Add to Gemfile:
 
-    gem "globalize_spree", :git => 'https://tomash@github.com/tomash/globalize-spree.git'
+    gem "globalize_spree", :git => 'git://github.com/tomash/globalize-spree.git'
 
 Also, to be super-sure (I've ran into some trouble before that, needs investigation) add
 
@@ -17,8 +17,9 @@ Also, to be super-sure (I've ran into some trouble before that, needs investigat
 
 to your application Gemfile as well.
 
-Now run the rake task to copy migrations:
+Now run the rake task to copy migrations and run them:
     rake globalize_spree:install
+    rake db:migrate
 
 
 ## Usage
