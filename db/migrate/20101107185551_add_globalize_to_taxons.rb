@@ -1,6 +1,6 @@
 class AddGlobalizeToTaxons < ActiveRecord::Migration
   def self.up
-    Taxon.create_translation_table! :name => :string
+    Taxon.create_translation_table! :name => :string, :description => :text
     
     # save old values into brand new translations table
     Taxon.migrate_translated_fields
