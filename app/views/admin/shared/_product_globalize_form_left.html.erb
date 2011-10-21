@@ -1,3 +1,4 @@
+<div class="left" data-hook="admin_product_form_left">
 <% if(Product.easy_accessors.blank?) %>
   <%= f.field_container :name do %>
     <%= f.label :name, t("name") %> <span class="required">*</span><br />
@@ -43,3 +44,4 @@
   <% end %>
 
 <% end %>
+</div>

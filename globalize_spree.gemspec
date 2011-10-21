@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'globalize_spree'
-  s.version     = '0.2.0'
+  s.version     = '0.2.1'
   s.summary     = 'Globalize3-Spree integration'
   s.description = 'A Spree extension that integrates Globalize3 gem for model translations.'
   s.required_ruby_version = '>= 1.8.7'
@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency('i18n', '>= 0.4.2')
   s.add_dependency('globalize3', '>= 0.0.9')
-  s.add_dependency('spree_core', '>= 0.30.0.beta2')
+  s.add_dependency('spree_core', '>= 0.70.0')
 end
