@@ -9,6 +9,9 @@ group :test do
   gem 'capybara', '1.0.1'
   gem 'faker'
   gem 'factory_girl'
+
+  # yes it's needed here (despite gemspec) for dummy app generator to work
+  gem 'globalize3', '>= 0.0.9'
 end
 
 gemspec
