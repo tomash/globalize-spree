@@ -2,6 +2,9 @@
 
 Localizing model data in Spree using Globalize3.
 
+[![Build Status](https://secure.travis-ci.org/tomash/globalize_spree.png)](http://travis-ci.org/tomash/globalize_spree)
+
+
 
 ## Installation
 
