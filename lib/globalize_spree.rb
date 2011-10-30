@@ -1,8 +1,7 @@
 require 'spree_core'
-require 'globalize_spree_hooks'
-
 module GlobalizeSpree
   class Engine < Rails::Engine
+    engine_name 'globalize_spree'
 
     config.autoload_paths += %W(#{config.root}/lib)
 
