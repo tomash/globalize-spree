@@ -8,4 +8,4 @@ tmp
 nbproject
 *.swp
 Gemfile.lock
-spec/dummy/log/*
+spec/dummy/
